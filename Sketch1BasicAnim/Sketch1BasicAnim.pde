@@ -22,5 +22,13 @@ void setup() {
 void draw() {
   //background(0,0,100);
   //fill(18, 100, 100);
+  /* if (size(dots) < 1000) {
+    w = int(random(20, 40)); // this was originally outside
+    h = int(random(20, 40)); // the for loop, but I moved
+    x = int(random(300,700)); // it in so x, y, w, h  are all 
+    y = int(random(200,600)); // different for each dot
+    myDot dot = new myDot(x,y,w,h);
+    dots.add(dot);
+  } */
   for (myDot d : dots) d.draw();
 }
