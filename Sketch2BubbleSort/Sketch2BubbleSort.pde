@@ -1,7 +1,7 @@
 int[] array = new int[30];
 int maxVal = 100;
 // visual parameters
-int speed = 6;
+int speed = 8;
 int xStart = 90;
 int lineSpace = 20;
 int delX = 10;
@@ -43,7 +43,7 @@ void draw(){
     stroke(c, 100, 100);
     strokeWeight(10);
     
-    line(xStart, 25+lineSpace*j, xStart + delX, 25+lineSpace*j);
+    line(xStart, 25+lineSpace*j, xStart + delX-2, 25+lineSpace*j);
     
   }
   xStart += delX;
