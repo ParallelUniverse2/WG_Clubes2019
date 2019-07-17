@@ -2,7 +2,7 @@ int x,y,vx,vy,wallL,wallR,floor,ceil,cornerCount;
 void setup() {
   size(800,600);
   x=100; y=100;
-  vx=5; vy=3;
+  vx=7; vy=11;
   wallR = 775; wallL = 25;
   floor = 575; ceil = 25;
 }
