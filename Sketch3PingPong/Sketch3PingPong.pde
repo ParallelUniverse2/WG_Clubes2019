@@ -1,4 +1,4 @@
-int x,y,vx,vy,wallL,wallR,floor,ceil;
+int x,y,vx,vy,wallL,wallR,floor,ceil,cornerCount;
 void setup() {
   size(800,600);
   x=100; y=100;
@@ -14,5 +14,8 @@ void draw() {
   if (x <= wallL) vx *= -1;
   if (y >= floor) vy *= -1;
   if (y <= ceil) vy *= -1;
+  if ((x >= wallR || x <= wallL) && (y >= floor || y <= ceil)) cornerCount++;
   x += vx; y += vy;
+  textSize(15);
+  text("Corner Count: "+cornerCount, 25, 25);
 }
