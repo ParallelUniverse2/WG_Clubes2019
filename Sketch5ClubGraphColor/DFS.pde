@@ -3,10 +3,10 @@
 class DFS {
   ArrayList<Node> nodes;
   ArrayList<Edge> edges;
-  int[] col1 = new int[]{8,9,11};
-  int[] col2 = new int[]{12};
-  int[] col3 = new int[]{10,13};
-  int[] col4 = new int[]{14};
+  int[] col1 = {8,9,11};
+  int[] col2 = {12};
+  int[] col3 = {10,13};
+  int[] col4 = {14};
   
   DFS(ArrayList<Node> nodes, ArrayList<Edge> edges){
     this.nodes = nodes;

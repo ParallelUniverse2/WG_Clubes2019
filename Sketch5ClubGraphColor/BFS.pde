@@ -3,8 +3,8 @@
 class BFS {
   ArrayList<Node> nodes;
   ArrayList<Edge> edges;
-  int[] lvl2 = new int[]{2,3};
-  int[] lvl3 = new int[]{4,5,6,7};
+  int[] lvl2 = {2,3};
+  int[] lvl3 = {4,5,6,7};
   
   BFS(ArrayList<Node> nodes, ArrayList<Edge> edges){
     this.nodes = nodes;
