@@ -6,9 +6,9 @@ class Node {
     this.name = _name;
   }
   void draw() {
-    fill(0); textSize(14); 
-    text(name, loc.x, loc.y);
     fill(0, 255, 255); 
-    ellipse(loc.x, loc.y, 20, 20);
+    ellipse(loc.x, loc.y, 30, 30);
+    fill(0); textSize(14); 
+    text(name, loc.x-4, loc.y+4);
   }
 }
