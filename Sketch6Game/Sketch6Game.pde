@@ -36,7 +36,7 @@ void draw() {
       wall.xv = xvel;
     }
     if (removeWall) walls.remove(walls.get(0));
-    if (count % 420 == 0) {xvel--; spawnTime -= 2;}
+    if (count % 420 == 0) {xvel--; spawnTime -= 2; count = 1;}
     count++;
     removeWall = false;
     colorMode(HSB,360,100,100);
