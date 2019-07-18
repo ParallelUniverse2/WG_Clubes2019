@@ -4,7 +4,7 @@ int mode = 0; // 0: not started 1: playing 2: game over
 boolean removeWall = false;
 int count = 0;
 int score = 0;
-int spawnTime = 90;
+int spawnTime = 100;
 float xvel = -3;
 void setup() {
   size(1000,600);
@@ -36,7 +36,7 @@ void draw() {
       wall.xv = xvel;
     }
     if (removeWall) walls.remove(walls.get(0));
-    if (count % 420 == 0) {xvel--; spawnTime -= 2; count = 1;}
+    if (count % 420 == 0) {xvel--; spawnTime = int(-300/xvel); count = 1;}
     count++;
     removeWall = false;
     colorMode(HSB,360,100,100);
