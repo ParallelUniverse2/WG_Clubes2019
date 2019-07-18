@@ -1,9 +1,10 @@
 class Wall {
   float x, y;
   float gap = 200;
-  float xv = -3;
-  Wall(float _x, float _y) {
-    this.x = _x; this.y = _y;
+  float xv;
+  boolean hasCollided = false;
+  Wall(float _x, float _y, float _xv) {
+    this.x = _x; this.y = _y; this.xv = _xv;
   }
   void draw() {
     stroke(100,0,0);
