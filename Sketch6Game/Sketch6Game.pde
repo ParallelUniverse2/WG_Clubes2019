@@ -49,6 +49,7 @@ void draw() {
     fill(map((millis()+5000)%10000,0,10000,0,360),100,100);
     textSize(20);
     text("Score: "+score, 900, 50);
+    text("Space: jump", 50, 50);
   } 
   else if (mode == 2) {
     textSize(30);
