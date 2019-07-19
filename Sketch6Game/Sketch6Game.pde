@@ -51,6 +51,7 @@ void draw() {
     textSize(20);
     text("Score: "+score, 900, 50);
     text("Space: jump", 50, 50);
+    colorMode(RGB);
   } 
   else if (mode == 2) {
     textSize(30);
