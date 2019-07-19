@@ -1,13 +1,19 @@
-Player player = new Player(100,300,25,color(0,0,255));
-ArrayList<Wall> walls = new ArrayList<Wall>();
-int mode = 0; // 0: not started 1: playing 2: game over
-boolean removeWall = false;
-int count = 0;
-int score = 0;
-int spawnTime = 100;
-float xvel = -3;
+Player player;
+ArrayList<Wall> walls;
+int mode; // 0: not started 1: playing 2: game over
+boolean removeWall;
+int count, score, spawnTime;
+float xvel;
 void setup() {
+  player = new Player(100,300,25,color(0,0,255));
   size(1000,600);
+  mode = 0;
+  walls = new ArrayList<Wall>();
+  removeWall = false;
+  count = 0;
+  score = 0;
+  spawnTime = 100;
+  xvel = -3;
 }
 void draw() {
   colorMode(HSB,360,100,100);
@@ -47,13 +53,15 @@ void draw() {
   else if (mode == 2) {
     textSize(30);
     fill(0);
-    text("Game over", 400, 250);
-    text("Score: "+score, 400, 350);
+    text("Game over", 400, 200);
+    text("Score: "+score, 400, 300);
+    text("Press space to try again.", 400, 400);
   }
 }
 void keyPressed() {
   if (key == ' ') {
     if (mode == 0) mode++;
-    else player.vy = -8;
+    else if (mode == 1) player.vy = -8;
+    else setup();
   }
 }
