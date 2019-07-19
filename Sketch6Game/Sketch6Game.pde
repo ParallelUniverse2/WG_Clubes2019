@@ -5,6 +5,7 @@ boolean removeWall;
 int count, score, spawnTime;
 float xvel;
 void setup() {
+  colorMode(RGB);
   player = new Player(100,300,25,color(0,0,255));
   size(1000,600);
   mode = 0;
